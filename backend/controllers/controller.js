@@ -3,7 +3,8 @@ const getGoals = (req, res)=>{
 }
 
 const setGoals = (req, res)=>{
-    res.json({message: "Set Goals"})
+    console.log(req.body)
+    res.status(200).json({...req.body, status: "ok"})
 }
 
 const deleteGoal = (req, res)=>{
